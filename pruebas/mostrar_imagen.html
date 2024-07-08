@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="imagenes"></div>
+
+<script>
+    $(document).ready(function(){
+        $.get("../pruebas/mostrar_imagen.php", function(data, status){
+            $("#imagenes").html(data);
+        });
+    });
+</script>
+
+</body>
+</html>

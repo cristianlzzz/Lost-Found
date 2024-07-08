@@ -1,0 +1,5 @@
+.navbar-nav .nav-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 152, 129, 0.3);
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Cambia el color de fondo */
+}

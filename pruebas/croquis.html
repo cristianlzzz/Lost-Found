@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croquis Interactivo</title>
+    <style>
+        /* Añadir algunos estilos básicos */
+        .interactive-map {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ccc;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="interactive-map">
+    <svg id="map" viewBox="0 0 500 500">
+        <!-- Aquí irán los elementos del SVG -->
+        <circle cx="100" cy="100" r="40" fill="blue" class="interactive-element" data-info="Punto A" />
+        <rect x="200" y="200" width="100" height="100" fill="green" class="interactive-element" data-info="Punto B" />
+        <!-- Añadir más elementos según sea necesario -->
+    </svg>
+</div>
+<div id="tooltip" class="tooltip"></div>
+
+<script>
+    // JavaScript para interactividad
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.interactive-element');
+        const tooltip = document.getElementById('tooltip');
+
+        elements.forEach(element => {
+            element.addEventListener('mouseenter', function(event) {
+                tooltip.innerHTML = event.target.getAttribute('data-info');
+                tooltip.style.display = 'block';
+            });
+
+            element.addEventListener('mouseleave', function() {
+                tooltip.style.display = 'none';
+            });
+
+            element.addEventListener('mousemove', function(event) {
+                tooltip.style.left = event.pageX + 10 + 'px';
+                tooltip.style.top = event.pageY + 10 + 'px';
+            });
+        });
+    });
+</script>
+</body>
+</html>

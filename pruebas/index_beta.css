@@ -1,0 +1,98 @@
+/* Estilos para las imágenes */
+.imagen-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Fondo blanco para mayor contraste */
+    padding: 20px; /* Añadir padding para espaciar contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+    transition: transform 0.2s; /* Añadir una transición para el hover */
+}
+
+.imagen-vertical:hover {
+    transform: translateY(-10px); /* Desplazamiento hacia arriba al hacer hover */
+}
+
+.imagen-vertical img {
+    max-width: 300px; /* Ajusta el ancho máximo de la imagen según tus necesidades */
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-bottom: 20px; /* Espacio entre la imagen y la información */
+}
+
+.informacion {
+    background-color: #f9f9f9; /* Color de fondo más claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    font-family: 'Arial', sans-serif; /* Fuente personalizada */
+    color: #333; /* Color de texto */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.informacion h2, .informacion p {
+    margin: 10px 0; /* Márgenes verticales */
+}
+
+.informacion h2 {
+    font-size: 1.5em; /* Tamaño de fuente para títulos */
+    font-weight: bold; /* Negrita para títulos */
+    color: #2c3e50; /* Color del título */
+}
+
+.informacion p {
+    font-size: 1em; /* Tamaño de fuente para párrafos */
+    line-height: 1.4; /* Altura de línea */
+}
+
+/* Ajustes generales para el cuerpo y el contenedor principal */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente personalizada */
+    background-color: #f0f0f0; /* Color de fondo general */
+    color: #333; /* Color de texto general */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%; /* Ancho del contenedor principal */
+    max-width: 800px; /* Ancho máximo */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px; /* Padding del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+    margin: 20px auto; /* Centrando el contenedor */
+}
+
+/* Estilo para el botón de Discord en la esquina */
+.discord-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7289da; /* Color de fondo de Discord */
+    color: #fff; /* Color de texto blanco */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+.discord-button:hover {
+    background-color: #5a6ebc; /* Color de fondo al hacer hover */
+}
+
+.discord-button img {
+    width: 60%; /* Ajusta el tamaño del icono */
+    height: auto; /* Mantiene la proporción */
+}
